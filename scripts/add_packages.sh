@@ -15,6 +15,16 @@ CONFIG_PACKAGE_smartmontools=y
 EOL
 # }}
 
+# {{ Add helloworld
+(cd friendlywrt/package && {
+    git clone https://github.com/Zack0617/helloworld --depth 1 -b master
+})
+cat >> configs/rockchip/01-nanopi <<EOL
+CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-compat=y
+EOL
+# }}
+
 # {{ Add luci-theme-argon
 (cd friendlywrt/package && {
     [ -d luci-theme-argon ] && rm -rf luci-theme-argon

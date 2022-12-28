@@ -3,8 +3,8 @@
 ### General info 
 - User：root
 - Password：password
-- IP：192.168.2.1
-- Download： https://github.com/friendlyarm/Actions-FriendlyWrt/releases
+- IP：192.168.10.253(Disable the DHCP)
+- Download： https://github.com/Zack0617/Actions-FriendlyWrt/releases
 - Document: https://wiki.friendlyelec.com/wiki/index.php/Template:FriendlyWrt21/zh
 ### About image file
 - The same image file supports installation to both SD and eMMC

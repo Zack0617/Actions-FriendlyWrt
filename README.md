@@ -3,8 +3,8 @@
 ### 基本信息 
 - 用户名：root
 - 密码：password
-- 后台IP：192.168.2.1
-- 固件下载地址： https://github.com/friendlyarm/Actions-FriendlyWrt/releases
+- 后台IP：192.168.10.253(关闭DHCP)
+- 固件下载地址： https://github.com/Zack0617/Actions-FriendlyWrt/releases
 - 更多使用说明: https://wiki.friendlyelec.com/wiki/index.php/Template:FriendlyWrt21/zh
 ### 固件说明
 - 同一固件文件同时支持安装至SD和eMMC，不作区分
