@@ -16,12 +16,11 @@ EOL
 # }}
 
 # {{ Add helloworld
-(cd friendlywrt/package && {
-    git clone https://github.com/Zack0617/helloworld --depth 1 -b master
-})
+echo "src-git helloworld https://github.com/Zack0617/helloworld.git" >> friendlywrt/feeds.conf.default
 cat >> configs/rockchip/01-nanopi <<EOL
 CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-compat=y
+CONFIG_PACKAGE_luci-base=y
 EOL
 # }}
 
