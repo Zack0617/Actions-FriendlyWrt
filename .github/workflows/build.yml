@@ -213,7 +213,7 @@ jobs:
           MODEL=R2S-R2C-Series
           ;;
         rk3399)
-          MODEL=R4S-Series
+          MODEL=R4SE
           ;;
         rk3568)
           MODEL=R5S-R5C-Series
