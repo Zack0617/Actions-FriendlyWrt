@@ -46,7 +46,8 @@ jobs:
         wget https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh
         sed -i -e 's/^apt-get -y install openjdk-8-jdk/# apt-get -y install openjdk-8-jdk/g' install.sh
         sed -i -e 's/^\[ -d fa-toolchain \]/# [ -d fa-toolchain ]/g' install.sh
-        sed -i -e 's/^cat fa-toolchain/# cat fa-toolchain/g' install.sh
+        sed -i -e 's/^(cat fa-toolchain/# (cat fa-toolchain/g' install.sh
+        sed -i -e 's/^(tar xf fa-toolchain/# (tar xf fa-toolchain/g' install.sh
         sudo -E bash ./install.sh
         sudo -E update-alternatives --install $(which python) python /usr/bin/python2.7 20
         sudo -E git config --global user.name 'GitHub Actions'
@@ -155,7 +156,8 @@ jobs:
         wget https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh
         sed -i -e 's/^apt-get -y install openjdk-8-jdk/# apt-get -y install openjdk-8-jdk/g' install.sh
         sed -i -e 's/^\[ -d fa-toolchain \]/# [ -d fa-toolchain ]/g' install.sh
-        sed -i -e 's/^cat fa-toolchain/# cat fa-toolchain/g' install.sh
+        sed -i -e 's/^(cat fa-toolchain/# (cat fa-toolchain/g' install.sh
+        sed -i -e 's/^(tar xf fa-toolchain/# (tar xf fa-toolchain/g' install.sh
         sudo -E bash ./install.sh
         sudo -E update-alternatives --install $(which python) python /usr/bin/python2.7 20
         sudo -E git config --global user.name 'GitHub Actions'
@@ -219,7 +221,7 @@ jobs:
           MODEL=R5S-R5C-Series
           ;;
         rk3588)
-          MODEL=R6S
+          MODEL=T6-R6S-R6C-Series
           ;;
         *)
           echo "unknow cpu"
@@ -247,8 +249,9 @@ jobs:
     - name: Compile uboot and kernel
       run: |
         cd project
-        ./build.sh kernel
         ./build.sh uboot
+        ./build.sh kernel
+        source ../scripts/wifi/add_rtl8852be.sh
 
     - name: Build sd image
       id: build_sd_image

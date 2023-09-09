@@ -11,6 +11,26 @@
 ### How to write image to eMMC  
 - First write the image to an SD card, then boot the system from the SD card, visit the FriendyWrt admin page, go to the menu "System" -> "eMMC Tools", upload the image file and flash it in directly, no need to decompress the file, after the flashing is completed, eject the SD card, the device will automatically reboot and boot from the eMMC.
 ### Changelog
+* 2023/07/04
+    *  Bump kernel version to 5.10.160 (rk3568/rk3588)
+* 2023/06/10
+    *  Add support for MediaTek MT7921 wireless card
+* 2023/05/31
+    *  Add support for NanoPC-T6
+    *  Upgrade v22.03 to openwrt-22.03.5
+    *  Upgrade v21.02 to openwrt-21.02.7
+* 2023/04/26
+    *  Add support for R5C-2GB
+    *  Upgrade v22.03 to openwrt-22.03.4
+    *  Upgrade v21.02 to openwrt-21.02.6
+* 2023/03/15
+    *  Add support for NanoPi-R6C
+    *  Update initramfs,[you can disable or resize OverlayFS](https://wiki.friendlyelec.com/wiki/index.php/How_to_use_overlayfs_on_Linux)
+* 2023/03/01
+    *  Upgrade to openwrt-22.03.3
+    *  Add ntfs3 driver for 5.10 kernel (for R6S/R5S/R5C)
+    *  Update kernel
+    *  Update the r8125 driver
 * 2022/12/04
     *  Add support for NanoPi-R5C
     *  Fix the issue that the storage space cannot be expanded
